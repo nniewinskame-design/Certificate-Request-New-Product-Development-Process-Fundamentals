@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certificate Request Form</title>
 
+<!-- Import Titillium Web font -->
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 html, body {
     height: 100%;
@@ -14,14 +17,13 @@ html, body {
 body {
     box-sizing: border-box;
     background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Titillium Web', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100%;
 }
-
 .form-container {
     background: white;
     padding: 48px;
@@ -38,21 +40,17 @@ body {
         gap: 60px;
         align-items: start;
     }
-
     .header-section {
         padding-right: 20px;
         text-align: center;
     }
-
     .form-section {
         padding-left: 20px;
     }
-
     .header {
         text-align: center;
         margin-bottom: 24px;
     }
-
     .description {
         margin-bottom: 0;
     }
@@ -63,12 +61,10 @@ body {
     .form-content {
         display: block;
     }
-
     .header {
         text-align: center;
         margin-bottom: 32px;
     }
-
     .description {
         margin-bottom: 32px;
     }
@@ -78,13 +74,11 @@ body {
     text-align: center;
     margin-bottom: 32px;
 }
-
 .certificate-icon {
     font-size: 48px;
     margin-bottom: 16px;
     display: block;
 }
-
 .title {
     font-size: 28px;
     font-weight: 600;
@@ -92,32 +86,34 @@ body {
     margin-bottom: 12px;
     letter-spacing: -0.5px;
 }
-
 .description {
     margin-bottom: 32px;
 }
 
+/* UPDATED INSTRUCTIONS FONTS */
 .emphasized {
     color: #2d3748;
-    font-size: 16px;
+    font-size: 17px; /* updated */
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 12px;
     text-align: justify;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .less-emphasized {
     color: #718096;
-    font-size: 14px;
+    font-size: 15px; /* updated */
     line-height: 1.6;
     margin-bottom: 0;
     text-align: justify;
+    font-style: italic;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .form-group {
     margin-bottom: 24px;
 }
-
 label {
     display: block;
     margin-bottom: 8px;
@@ -127,9 +123,7 @@ label {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
-input[type="text"],
-input[type="email"] {
+input[type="text"], input[type="email"] {
     width: 100%;
     padding: 16px 20px;
     border: 2px solid #e2e8f0;
@@ -140,21 +134,16 @@ input[type="email"] {
     transition: all 0.3s ease;
     font-family: inherit;
 }
-
-input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
     border-color: #6bb745;
     background-color: white;
     box-shadow: 0 0 0 3px rgba(107, 183, 69, 0.1);
     transform: translateY(-1px);
 }
-
-input[type="text"]:hover,
-input[type="email"]:hover {
+input[type="text"]:hover, input[type="email"]:hover {
     border-color: #cbd5e0;
 }
-
 .submit-btn {
     width: 100%;
     background: linear-gradient(135deg, #6bb745 0%, #5a9e3a 100%);
@@ -172,55 +161,55 @@ input[type="email"]:hover {
     position: relative;
     overflow: hidden;
 }
-
 .submit-btn:hover {
     background: linear-gradient(135deg, #5a9e3a 0%, #4a8c2a 100%);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(107, 183, 69, 0.4);
 }
-
 .submit-btn:active {
     transform: translateY(0);
 }
-
 @media (max-width: 600px) {
     .form-container {
         padding: 32px 24px;
         margin: 16px;
     }
-
     .title {
         font-size: 24px;
     }
-
     .certificate-icon {
         font-size: 40px;
     }
 }
 </style>
-
 <style>@view-transition { navigation: auto; }</style>
-
 <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
 <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
 <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
-
 </head>
-
 <body>
 <div class="form-container">
 <div class="form-content">
-
 <div class="header-section">
 <div class="header">
     <span class="certificate-icon">🎓</span>
     <h1 class="title">Certificate Request</h1>
 </div>
-
-<div class="description">
-<p class="emphasized">Please provide your full name as you'd like it to appear on your certificate.</p>
-<p class="less-emphasized">Take a moment to double-check your spelling - your name will appear exactly as entered. Your certificate will be sent to your inbox within a week after review. If you don't see it, please check your spam folder just in case.</p>
+<div class="description" style="text-align: justify;">
+    <p class="emphasized" style="font-weight: 600; font-style: normal;">
+        Please provide your full name as you'd like it to appear on your certificate.
+    </p>
+    <p class="less-emphasized" style="font-style: normal;">
+        Take a moment to double-check your spelling – your name will appear exactly as entered.
+        Your certificate will be sent to your inbox 
+        <span style="color: #5a9e3a; font-weight: 600; font-style: normal;">within a week after review</span>. 
+        If you don't see it, please check your spam folder just in case.
+    </p>
+    <p class="less-emphasized" style="font-style: italic; margin-top: 0.75em;">
+    Please note: submitting this form multiple times will not speed up delivery.
+</p>
 </div>
+
 </div>
 
 <div class="form-section">
